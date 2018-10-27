@@ -59,7 +59,7 @@ public class LancamentoFinanceiroEndpointTest {
         lancamentoFinanceiro.setUsuario(new Usuario(1l));
         lancamentoFinanceiro.setDataCriacao(LocalDate.of(2018, 10, 10));
         lancamentoFinanceiro.setDataVencimento(LocalDate.of(2018, 10, 20));
-        ResultActions post = mvc.perform(post("/lancamentofinanceiro").contentType(MediaType.APPLICATION_JSON_UTF8_VALUE).content(convertObjectToJsonBytes(usuario))).andExpect(status().isOk());
+        ResultActions post = mvc.perform(post("/lancamentoFinanceiro/").contentType(MediaType.APPLICATION_JSON_UTF8_VALUE).content(convertObjectToJsonBytes(usuario))).andExpect(status().isOk());
     }
 
     private Usuario getUsuario() {
